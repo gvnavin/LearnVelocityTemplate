@@ -1,0 +1,22 @@
+{
+"version": "2017-02-28",
+"operation": "GetItem",
+
+$args.id
+
+
+#foreach($item in $list)
+#end
+
+###set($rangeKey  =  $ctx.args.rangeKey)
+###if($ctx.args.rangeKey == null)
+##  #set( $rangeKey  = "TEST_INFO_LATEST_VERSION" )
+###end
+
+##"rangeKey" = $rangeKey
+
+##"key": {
+##"id": $util.dynamodb.toDynamoDBJson($ctx.args.id),
+##"rangeKey": $util.dynamodb.toDynamoDBJson($rangeKey),
+##},
+}
